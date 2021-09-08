@@ -1,0 +1,2 @@
+Search-ADAccount -Disabled | Select-Object Name, SamAccountName, DistinguishedName, AccountExpirationDate | Export-Csv -Path #Path location.\expiredaccounts.csv -NoTypeInformation
+#add -append if you want to update a previous version

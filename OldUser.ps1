@@ -1,0 +1,2 @@
+Search-ADAccount -AccountExpired | Where-Object {$_.AccountExpirationDate -ge ((Get-Date).AddDays(-60))} | Select-Object Name, SamAccountName, DistinguishedName, AccountExpirationDate | Export-Csv -Path #Path location.\expiredaccounts.csv -NoTypeInformation
+#add -append if you want to update a previous version
